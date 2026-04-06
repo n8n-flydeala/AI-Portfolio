@@ -1,0 +1,11 @@
+/* Smooth button hover */
+button, .glass-btn {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Contact form focus glow */
+input:focus, textarea:focus {
+  outline: none;
+}
+
+/* Optional reveal animation */
