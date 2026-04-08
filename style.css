@@ -1,3 +1,5 @@
+/* --- EXISTING STYLES (Retained) --- */
+
 /* Fade Up Animation */
 .fade-up {
   opacity: 0;
@@ -31,6 +33,7 @@
 
 /* Typewriter Effect */
 .typewriter {
+  display: inline-block; /* Changed from block to inline-block */
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid #facc15;
@@ -86,4 +89,32 @@
   outline: none;
   border-color: #facc15;
   box-shadow: 0 0 8px #facc1580;
+}
+
+/* --- MOBILE RESPONSIVENESS (The Fix) --- */
+
+@media (max-width: 768px) {
+  /* 1. Typewriter Fix: Para hindi lumampas ang text sa mobile */
+  .typewriter {
+    white-space: normal; /* Pinapayagan na mag-wrap ang text sa phone */
+    border-right: none;  /* Tinatanggal ang cursor line para hindi magulo */
+    animation: none;      /* Optional: mas safe i-disable ang typing anim sa phone */
+    font-size: 1.5rem;   /* Swak na laki para sa mobile titles */
+  }
+
+  /* 2. Padding adjustments */
+  .service-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* 3. Global Container padding */
+  body {
+    padding: 0 15px; /* Dagdag space sa gilid para hindi dikit sa screen */
+  }
+
+  /* 4. Font size scaling */
+  .service-title {
+    font-size: 1.1rem;
+  }
 }
